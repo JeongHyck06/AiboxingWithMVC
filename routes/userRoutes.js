@@ -1,4 +1,4 @@
-// routes/userDeleteRoutes.js
+// routes/userRoutes.js
 const express = require("express");
 const router = express.Router();
 const { getDB } = require("../db/mongo");
@@ -38,6 +38,7 @@ router.post("/userDelete", async (req, res) => {
     res.json({ success: false });
   }
 });
+
 // 업데이트
 router.post("/userUpdate", async (req, res) => {
   const { userId, name, studentId } = req.body;
