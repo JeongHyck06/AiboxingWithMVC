@@ -8,7 +8,6 @@ app.use(express.urlencoded({ extended: true }));
 
 connectDB()
   .then(() => {
-    // 수정된 부분
     app.listen(process.env.PORT, () => {
       console.log(`Server running on port ${process.env.PORT}`);
     });
@@ -23,8 +22,8 @@ connectDB()
     const resultGameRoutes = require("./routes/resultGameRoutes");
     app.use("/resultGame", resultGameRoutes);
 
-    const listRoutes = require("./routes/listViewRoutes");
-    app.use("/listView", listRoutes);
+    const listViewRoutes = require("./routes/listViewRoutes");
+    app.use("/listView", listViewRoutes);
 
     // const mainRoutes = require();
     // app.use("/deleteUser", );
