@@ -5,7 +5,7 @@ const { connectDB } = require("./db/mongo"); // 수정된 부분
 app.use(express.json()); // JSON 본문을 처리
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-
+app.set("view engine", "ejs");
 connectDB()
   .then(() => {
     app.listen(process.env.PORT, () => {
