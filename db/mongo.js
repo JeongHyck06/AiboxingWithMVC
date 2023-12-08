@@ -1,4 +1,3 @@
-// mongo.js
 const { MongoClient } = require("mongodb");
 
 let db;

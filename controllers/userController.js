@@ -1,4 +1,3 @@
-// controllers/userController.js
 const { getDB } = require("../db/mongo");
 const { ObjectId } = require("mongodb");
 const winston = require("winston");

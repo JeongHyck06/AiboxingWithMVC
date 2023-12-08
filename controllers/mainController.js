@@ -1,5 +1,3 @@
-//mainControllers.js
-
 const path = require("path");
 
 exports.getIndex = (req, res) => {

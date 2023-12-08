@@ -22,18 +22,3 @@ exports.postGameResult = async (req, res) => {
     res.status(500).send("Error processing game result");
   }
 };
-
-// 게임 결과 목록 조회
-exports.getGameResults = async (req, res) => {
-  try {
-    const results = await db
-      .collection("post")
-      .find()
-      .sort({ score: -1 })
-      .toArray();
-    res.render("list", { users: results });
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Error retrieving game results");
-  }
-};
