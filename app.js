@@ -4,7 +4,7 @@ require("dotenv").config();
 const { connectDB } = require("./db/mongo"); // 수정된 부분
 app.use(express.json()); // JSON 본문을 처리
 app.use(express.urlencoded({ extended: true }));
-// 기타 설정...
+app.use(express.static("public"));
 
 connectDB()
   .then(() => {
@@ -25,11 +25,8 @@ connectDB()
     const listViewRoutes = require("./routes/listViewRoutes");
     app.use("/listView", listViewRoutes);
 
-    // const mainRoutes = require();
-    // app.use("/deleteUser", );
-
-    // const mainRoutes = require();
-    // app.use("/updateUser", );
+    const userRoutes = require("./routes/userRoutes");
+    app.use(userRoutes);
   })
   .catch((err) => {
     console.log("Database connection error:", err);

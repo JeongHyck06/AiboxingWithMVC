@@ -4,7 +4,7 @@ function deleteUser(userId) {
   alert("삭제를 위해 비밀번호 입력 바람");
   var input = prompt();
   if (input == "1111") {
-    fetch("/deleteUser", {
+    fetch("/deleteUpdate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,7 +43,7 @@ document.getElementById("editForm").addEventListener("submit", function (e) {
 
   // AJAX 요청을 위한 설정
   const data = { userId, name, studentId };
-  fetch("/updateUser", {
+  fetch("/userUpdate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

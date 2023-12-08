@@ -17,7 +17,7 @@ exports.postGameResult = async (req, res) => {
       studentId: studentId,
       score: parseInt(score, 10),
     });
-    res.redirect("/list");
+    res.redirect("/listView");
   } catch (err) {
     console.error(err);
     res.status(500).send("Error processing game result");

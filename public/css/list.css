@@ -1,0 +1,147 @@
+.ranking-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+.user-box {
+    border: 1px solid #424242;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    width: 60%; /* 박스 너비 조정 */
+    margin: 20px auto; /* 중앙 정렬 */
+}
+
+.user-box:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.user-name {
+    font-size: 1.8em; /* 폰트 크기 증가 */
+    color: #333;
+    margin: 10px 0; /* 여백 추가 */
+}
+
+.user-id {
+    font-size: 1.2em; /* 폰트 크기 증가 */
+    color: #666;
+    margin: 5px 0; /* 여백 추가 */
+}
+
+.user-score {
+    font-size: 1.4em; /* 폰트 크기 증가 */
+    font-weight: bold; /* 굵은 글씨체 적용 */
+    color: #d35400; /* 색상 변경 */
+    padding: 5px 10px; /* 패딩 추가 */
+    margin: 5px 0; /* 여백 조정 */
+    background-color: #f9ebea; /* 배경색 추가 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    display: inline-block; /* 배경색이 텍스트 영역에만 적용되도록 */
+}
+
+/* 모달 배경 */
+#editModal {
+    position: fixed; /* 고정 위치 */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+    z-index: 1000; /* 다른 요소들 위에 표시 */
+}
+
+/* 모달 내용 */
+#editModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+/* 모달창 내부 폼 스타일 */
+#editForm {
+    background-color: #fff; /* 흰색 배경 */
+    padding: 20px; /* 패딩 */
+    border-radius: 5px; /* 둥근 모서리 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* 그림자 효과 */
+    width: 200px; /* 너비 조정 */
+    max-width: 400px; /* 최대 너비 설정 */
+    width: 60%; /* 너비 비율 */
+    margin: auto; /* 자동 마진으로 중앙 정렬 */
+}
+
+/* 입력 필드 스타일 */
+#editForm input[type="text"] {
+    width: 90%; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+}
+
+/* 버튼 스타일 */
+#editForm button {
+    padding: 10px 15px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    margin-right: 10px; 
+}
+
+#editForm button[type="submit"] {
+    background-color: #4CAF50; 
+    color: white; 
+}
+
+
+
+.edit-btn {
+    background-color: #4CAF50; /* 버튼 배경색 */
+    color: white; /* 글자색 */
+    padding: 10px 15px; /* 내부 여백 */
+    border: none; /* 테두리 없음 */
+    border-radius: 5px; /* 둥근 모서리 */
+    text-transform: uppercase; /* 대문자 변환 */
+    font-weight: bold; /* 굵은 글씨체 */
+    cursor: pointer; /* 마우스 포인터 변경 */
+    transition: background-color 0.3s ease; /* 부드러운 색상 전환 효과 */
+}
+
+/* 수정 버튼 호버 효과 */
+.edit-btn:hover {
+    background-color: #45a049; /* 호버 시 배경색 변경 */
+}
+
+/* 삭제 버튼 스타일 */
+.delete-btn {
+    background-color: #f44336; /* 버튼 배경색 - 빨간색 */
+    color: white; /* 글자색 - 흰색 */
+    padding: 10px 15px; /* 내부 여백 */
+    border: none; /* 테두리 없음 */
+    border-radius: 5px; /* 둥근 모서리 */
+    text-transform: uppercase; /* 대문자 변환 */
+    font-weight: bold; /* 굵은 글씨체 */
+    cursor: pointer; /* 마우스 포인터 변경 */
+    transition: background-color 0.3s ease; /* 부드러운 색상 전환 효과 */
+}
+
+/* 삭제 버튼 호버 효과 */
+.delete-btn:hover {
+    background-color: #e53935; /* 호버 시 배경색 변경 */
+}
+
+#editForm button[type="button"] {
+    background-color: #f44336; 
+    color: white;
+}
