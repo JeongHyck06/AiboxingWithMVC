@@ -16,7 +16,7 @@ let currentPose = "";
 let score = 0;
 let poseInterval;
 let timer;
-let timeRemaining = 2;
+let timeRemaining = 10;
 let gameActive = false;
 
 // 포즈 챌린지를 시작하는 함수
@@ -75,7 +75,7 @@ async function init() {
 
   startPoseChallenge();
   startTimer();
-  setTimeout(endGame, 3000);
+  setTimeout(endGame, 10000);
 }
 
 // 타이머 시작을 처리하는 함수

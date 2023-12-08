@@ -4,7 +4,7 @@ function deleteUser(userId) {
   alert("삭제를 위해 비밀번호 입력 바람");
   var input = prompt();
   if (input == "1111") {
-    fetch("/deleteUpdate", {
+    fetch("/userDelete", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

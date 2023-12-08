@@ -1,4 +1,3 @@
-// gameController.js
 const { ObjectId } = require("mongodb");
 const { getDB } = require("../db/mongo");
 
