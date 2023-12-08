@@ -1,0 +1,39 @@
+<!-- gameInterface.ejs -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/gameInterface.css">
+  <title>그에게 복수하기 위해 복싱이나 배우렵니다</title>
+</head>
+
+<body>
+  <div id="game-container">
+    <h1 style="color: white;">복싱의 기본기를 단련하세요!</h1>
+    <button type="button" onclick="init()">게임 시작</button>
+    <div id="timer" style="font-size: 1.5em; color: #ffffff;">남은 시간: 3초</div>
+    <div id="pose-challenge"></div>
+    <div id="loading" style="display: none;"><div class="spinner"></div></div>
+    <div><canvas id="canvas"></canvas></div>
+  
+    <div id="score-display">점수: 0</div>
+    <div id="label-container"></div>
+    
+    <!-- <button id="redirect-button" style= "display: none;" onclick="redirectBasedOnScore()">결과보기</button> -->
+    
+    <form id="result-container" action="/resultGame" method="POST" style= "display: none;">
+        <input type="text" id="name" name="name" placeholder="이름" required><br><br>
+        <input type="text" id="studentId" name="studentId" placeholder="학번" required><br><br>
+        <input type="hidden" id="score" name="score">
+        <button type="submit" id=resultButton">결과 보기</button>
+    </form>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+  <script src="/js/gameInterface.js"> </script>
+</body>
+
+</html>

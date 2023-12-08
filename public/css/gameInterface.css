@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color:  #333;
+  }
+  #game-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #3b3a3a; 
+  }
+  #canvas {
+    width: 100%;
+    background-color: #3b3a3a; 
+    margin-bottom: 10px;
+  }
+  #label-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  #pose-challenge {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d1d1d1;
+    margin-bottom: 10px;
+  }
+  #score-display {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d63031;
+    margin-bottom: 20px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: #d63031; /* 붉은색 배경 */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  }
+
+  .spinner {
+  border: 5px solid #f3f3f3; 
+  border-top: 5px solid #c11a1a;
+  width: 70px;
+  height: 70px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  /* margin-top: 20px; */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+#result-container {
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+}
+
+#result-container input[type="text"] {
+    width: 50%; /* 폼 너비 */
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; /* 폰트 크기 */
+}
+
+
+#resulttButton:hover {
+    background-color: #ff6b6b; /* 호버 시 배경색 변경 */
+}
+
+/* 폼 입력 필드에 포커스가 있을 때 */
+#result-container input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6); /* 밝은 색상의 그림자 */
+}

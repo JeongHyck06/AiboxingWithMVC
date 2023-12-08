@@ -1,0 +1,51 @@
+<!-- list.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/list.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <%= JSON.stringify(users) %> -->
+    <div class="ranking-container">
+        <% for (var i = 0; i < users.length; i++) { %>
+            <div class="user-box">
+                <% if (i == 0) { %>
+                    <span class="crown">👑</span>
+                <% } else if (i == 1) { %>
+                    <span class="crown">👑</span>
+                <% } else if (i == 2) { %>
+                    <span class="crown">👑</span>
+                <% } %>
+                <h2 class="user-name"><%= users[i].name %></h2>
+                <p class="user-id"><%= users[i].studentId %></p>
+                <p class="user-score"><%= users[i].score %>점</p>
+                <p class="user-rank"><%= i + 1 %>등</p>
+                <button onclick="deleteUser('<%= users[i]._id %>')" class="delete-btn">삭제</button>
+                <button onclick="openEditModal('<%= users[i]._id %>', '<%= users[i].name %>', '<%= users[i].studentId %>')" class="edit-btn">수정</button>
+
+
+            </div>
+            
+        <% } %> 
+
+    </div>
+    <div id="editModal" style="display:none;">
+        <form id="editForm">
+          <input type="hidden" id="editUserId" name="userId">
+          <label for="editName">이름:</label>
+          <input type="text" id="editName" name="name">
+          <label for="editStudentId">학번:</label>
+          <input type="text" id="editStudentId" name="studentId">
+          <button type="submit" onclick="closeEditModal()"">변경 저장</button>
+          <button type="button" onclick="closeEditModal()">취소</button>
+        </form>
+      </div>
+
+  <script src="/js/list.js"> </script>
+    
+</body>
+</html>
